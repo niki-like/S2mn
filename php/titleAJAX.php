@@ -12,7 +12,7 @@ $subscribes = R::find('subscribe','iduser = ?',[$user['id']]);//поиск по�
 
 
 
-
+/////////////////////////////////////////////////////////////////////////////////
 if(empty($_POST['subscribe'])){
 
   foreach ($subscribes as $key => $value) {

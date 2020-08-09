@@ -1,10 +1,10 @@
 $(document).ready(function() {
-
+//порядок вызова функций не менять местами, а добавлять в конец...
 startedAJAX();//добавляет подписки в выпадающее меню
 
 
-
-function startedAJAX() {
+///////////////////////////////////////////////////////////////////////
+function startedAJAX() {// 3
   $.ajax({
     url: '../php/titleAJAX.php',
     dataType: 'json',
