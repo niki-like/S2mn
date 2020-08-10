@@ -10,11 +10,11 @@ function startedAJAX() {// 3
     dataType: 'json',
     data: "subscribe",
     success: function(data) {
-      data = (JSON.parse(JSON.stringify(data)));
+      data = (JSON.parse(JSON.stringify(data)));//декодирование данных
       // console.log(data);
-      data.forEach((item, i) => {
+      data.forEach((item, i) => {//перебор массива
         // console.log(item + " --- " + i);
-        $(".downArea").append("<option>" + item + "</option>")
+        $(".downArea").append("<option>" + item + "</option>")//занесение значений в выпадающий блок
         return data;
       });
 

@@ -21,12 +21,12 @@ if(empty($_POST['subscribe'])){
   foreach ($subscribesIDHOBBIE as $key => $value) {
     $subscribesNAME[] = R::findOne('hobbie','id = ?',[$value])["name"];
   }
-
-
   echo json_encode($subscribesNAME);
-
 }
 
+if(empty($_POST['findArticles'])){
+  
+}
 
 
 
