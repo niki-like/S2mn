@@ -12,21 +12,25 @@ $subscribes = R::find('subscribe','iduser = ?',[$user['id']]);//поиск по�
 
 
 
-/////////////////////////////////////////////////////////////////////////////////
+
 if(empty($_POST['subscribe'])){
 
-  foreach ($subscribes as $key => $value) {
-    $subscribesIDHOBBIE[] = $value["idhobbie"];
+  foreach ($subscribes as $key => $value) {//перебор подписок
+    $subscribesIDHOBBIE[] = $value["idhobbie"];//id hobbie
   }
   foreach ($subscribesIDHOBBIE as $key => $value) {
-    $subscribesNAME[] = R::findOne('hobbie','id = ?',[$value])["name"];
+    $subscribesNAME[] = R::findOne('hobbie','id = ?',[$value])["name"];//имена хоби в массив <--
+    $subscribesID[] = R::findOne('hobbie','id = ?',[$value])["id"];//id хоби в массив <--
   }
-  echo json_encode($subscribesNAME);
+  foreach ($subscribesID as $value) {
+      $findArticles[] = R::find('article','idhobbies = ?',[$value]);
+  }
+  $jsonReturn["subscribesNAME"] = $subscribesNAME;
+  $jsonReturn["findArticles"] = $findArticles; //$findArticles;
+  echo json_encode($jsonReturn);
 }
 
-if(empty($_POST['findArticles'])){
-  
-}
+
 
 
 
