@@ -27,18 +27,18 @@
       <div class="contain">
 
             <div class="box box1">
-                <div class="title">Заголовок</div>
-                <div class="comment">Комментарий</div>
+                <div class="title">Тут можно настроить профиль, задать интересы и процее</div>
+                <div class="comment">Мой профиль</div>
             </div>
 
             <div class="box box2">
-                <div class="title">Заголовок</div>
-                <div class="comment">Комментарий</div>
+                <div class="title">Создать <br>или редактировать статью</div>
+                <div class="comment">Статьи</div>
             </div>
 
             <div class="box box3">
-                <div class="title">Заголовок</div>
-                <div class="comment">Комментарий</div>
+                <div class="title">Я придумаю, что тут сделать</div>
+                <div class="comment">Прочее</div>
             </div>
 
         </div>
@@ -48,7 +48,7 @@
     <nav>
       <form class="menu" action="" method="post">
         <select class="downArea" name="">
-          <option value="" selected>Выберите категорию</option>
+          <option value="" selected>Ваши категории</option>
         </select>
         <div class="containMenu">
           <input type="text" name="" value="" class="menuInput" placeholder="Поиск по названию">
@@ -59,7 +59,7 @@
 
     <main>
       <div class="articles">
-sdf
+
       </div>
     </main>
 
